@@ -1,8 +1,8 @@
 {
   "name": "your-js-lib",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "description": "a TypeScript library cli",
-  "main": "./build/your-js-lib.min.js",
+  "main": "dist/index.esm.js",
   "scripts": {
     "start": "rollup -c",
     "build": "rollup -c"

@@ -1,13 +1,16 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
-import sourcemap from 'rollup-plugin-sourcemaps'
+import sourceMaps from 'rollup-plugin-sourcemaps'
+
+const pkg = require('./package.json')
 
 export default {
   input: 'src/index.ts',
   output: {
-    file: 'dist/index.esm.js',
-    format: 'module'
+    file: pkg.main,
+    format: 'module',
+    sourcemap: true
   },
-  plugins: [resolve(), commonjs(), typescript(), sourcemap()]
+  plugins: [resolve(), commonjs(), typescript(), sourceMaps()]
 }
