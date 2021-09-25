@@ -5,6 +5,7 @@ specifiers:
   '@rollup/plugin-node-resolve': ^13.0.5
   '@rollup/plugin-typescript': ^8.2.5
   rollup: ^2.57.0
+  rollup-plugin-sourcemaps: ^0.6.3
   tslib: ^2.3.1
   typescript: ^4.4.3
 
@@ -13,6 +14,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.0.5_rollup@2.57.0
   '@rollup/plugin-typescript': 8.2.5_283b0408a190511f1240c12469d64cd5
   rollup: 2.57.0
+  rollup-plugin-sourcemaps: 0.6.3_rollup@2.57.0
   tslib: 2.3.1
   typescript: 4.4.3
 
@@ -94,6 +96,12 @@ packages:
       '@types/node': 16.10.0
     dev: true
 
+  /atob/2.1.2:
+    resolution: {integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==}
+    engines: {node: '>= 4.5.0'}
+    hasBin: true
+    dev: true
+
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
@@ -116,6 +124,11 @@ packages:
 
   /concat-map/0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    dev: true
+
+  /decode-uri-component/0.2.0:
+    resolution: {integrity: sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=}
+    engines: {node: '>=0.10'}
     dev: true
 
   /deepmerge/4.2.2:
@@ -231,12 +244,34 @@ packages:
       path-parse: 1.0.7
     dev: true
 
+  /rollup-plugin-sourcemaps/0.6.3_rollup@2.57.0:
+    resolution: {integrity: sha512-paFu+nT1xvuO1tPFYXGe+XnQvg4Hjqv/eIhG8i5EspfYYPBKL57X7iVbfv55aNVASg3dzWvES9dmWsL2KhfByw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      '@types/node': '>=10.0.0'
+      rollup: '>=0.31.2'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@2.57.0
+      rollup: 2.57.0
+      source-map-resolve: 0.6.0
+    dev: true
+
   /rollup/2.57.0:
     resolution: {integrity: sha512-bKQIh1rWKofRee6mv8SrF2HdP6pea5QkwBZSMImJysFj39gQuiV8MEPBjXOCpzk3wSYp63M2v2wkWBmFC8O/rg==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /source-map-resolve/0.6.0:
+    resolution: {integrity: sha512-KXBr9d/fO/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnKC+EwzvJZIP/qkuMgR/w==}
+    dependencies:
+      atob: 2.1.2
+      decode-uri-component: 0.2.0
     dev: true
 
   /sourcemap-codec/1.4.8:
