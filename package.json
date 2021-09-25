@@ -5,9 +5,9 @@
   "main": "dist/index.esm.js",
   "scripts": {
     "start": "rollup -c",
-    "prebuild": "rimraf dist",
+    "clean": "rimraf dist",
     "build": "rollup -c",
-    "build:dev": "npm-run-all prebuild build"
+    "build:dev": "npm-run-all clean build"
   },
   "authors": [
     "xxxx <xxxxx@gmail.com>"
