@@ -1,6 +1,6 @@
 {
   "name": "your-js-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a TypeScript library cli",
   "main": "./build/your-js-lib.min.js",
   "scripts": {
